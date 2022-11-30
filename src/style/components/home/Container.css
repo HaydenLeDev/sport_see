@@ -1,0 +1,6 @@
+.Container{
+    background-color: blue;
+    width: calc(100% - 167px);
+    height: 100%;
+    padding: 99px 50px 50px 117px;
+}
