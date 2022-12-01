@@ -4,6 +4,8 @@ import '../../style/components/header/Header.css';
 
 function Home() {
 
+    const data = 0;
+
     return (
         <div className="Home">
             <Header />
