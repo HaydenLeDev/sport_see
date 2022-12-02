@@ -1,0 +1,6 @@
+.Alimentation{
+    display: flex;
+    flex-direction: column;
+    width: 258px;
+    gap: 39px;
+}

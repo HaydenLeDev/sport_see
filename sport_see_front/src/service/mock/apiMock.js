@@ -7,3 +7,11 @@ export function getUserById(id){
         }
     }
 }
+
+export function getUserActivityById(id){
+    for(var i = 0; i < USER_ACTIVITY.length; i++){
+        if (USER_ACTIVITY[i].userId === id){
+            return USER_ACTIVITY[i]
+        }
+    }
+}

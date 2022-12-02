@@ -1,0 +1,25 @@
+.Title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 41px;
+    margin-left: 107px;
+    margin-top: 68px;
+}
+
+.Title-t{
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.Title-name{
+    color: #FF0101;
+}
+
+.Title-p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}

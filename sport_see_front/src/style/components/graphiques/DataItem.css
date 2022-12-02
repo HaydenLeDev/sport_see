@@ -1,0 +1,28 @@
+.DataItem{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #FBFBFB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+    padding: 32px;
+}
+
+.DataItem-Logo{
+    width: 60px;
+    height: 60px;
+}
+
+.DataItem-Text-number{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #282D30;
+}
+
+.DataItem-Text-cat{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+}

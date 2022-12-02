@@ -1,17 +1,11 @@
-import Header from "../header/Header";
-import Container from "./Container";
-import {getUserById} from "../../service/mock/apiMock"
-import '../../style/components/header/Header.css';
+import ChoiceProfil from "./ChoiceProfil"
+import '../../style/components/home/Home.css';
 
 function Home() {
 
-    const data = getUserById(12);
-    console.log(data.userInfos.firstName)
-
     return (
         <div className="Home">
-            <Header />
-            <Container />
+            <ChoiceProfil />
         </div>
     );
 }
