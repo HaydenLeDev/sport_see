@@ -22,8 +22,8 @@ function GraphUserActivity(props) {
                 height={300}
                 data={sessionUser}
             >
-                <XAxis axisLine={true} tickLine={false}/>
-                <YAxis axisLine={false} tickLine={false} orientation="right" />
+                <XAxis axisLine={true} tickLine={false} tickSize={20} stroke={"#9B9EAC"} />
+                <YAxis axisLine={false} tickLine={false} orientation="right" tickSize={20} stroke={"#9B9EAC"}/>
                 <Tooltip />
                 <CartesianGrid strokeDasharray="2" horizontal={true} vertical={false} />
                 <Bar dataKey="kilogram" fill="#282D30" radius={[10, 10, 0, 0]} barSize={7} />
