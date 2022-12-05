@@ -1,3 +1,11 @@
+.Graphiques{
+    display: flex;
+    width: calc(100% - 107px);
+    justify-content: space-between;
+    margin-left: 107px;
+}
+
+
 .Alimentation{
     display: flex;
     flex-direction: column;

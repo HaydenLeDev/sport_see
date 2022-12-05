@@ -1,0 +1,48 @@
+.GraphUserActivity_Informations{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.GraphUserActivity_Informations_legend{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.GraphUserActivity_Informations_legend_info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.GraphUserActivity_Informations_legend_couleur{
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.noir{
+    background-color: black;
+}
+
+.rouge{
+    background-color: red;
+}
+
+.GraphUserActivity_Informations_legend_info p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+}
+
+.GraphUserActivity_Informations_titre h2{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: #20253A;
+}
