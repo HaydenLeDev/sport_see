@@ -8,12 +8,13 @@ function Graphiques(props) {
     const infoUser = props.infoUser
     const sessionUser = props.sessionUser
     const userAverageSessions = props.userAverageSessions
+    const userPerformance = props.userPerformance
     
     return (
         <div className="Graphiques">   
             <div className="Graphiques-graph">
                 <GraphUserActivity sessionUser={sessionUser}/>
-                <GraphiquesInformation userAverageSessions={userAverageSessions}/>
+                <GraphiquesInformation userAverageSessions={userAverageSessions} userPerformance={userPerformance}/>
             </div>
             <Alimentation infoUser={infoUser} />
         </div>

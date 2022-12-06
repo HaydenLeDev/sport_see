@@ -53,3 +53,11 @@ export function getUserAverageSessions(id) {
 
     return userAverageSessions
 }
+
+export function getUserPerformance(id){
+    for (var i = 0; i < USER_PERFORMANCE.length; i++) {
+        if (USER_PERFORMANCE[i].userId === id) {
+            return USER_PERFORMANCE[i]
+        }
+    }
+}
