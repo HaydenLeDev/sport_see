@@ -15,3 +15,11 @@ export function getUserActivityById(id){
         }
     }
 }
+
+export function getUserAverageSessions(id){
+    for(var i = 0; i < USER_AVERAGE_SESSIONS.length; i++){
+        if (USER_AVERAGE_SESSIONS[i].userId === id){
+            return USER_AVERAGE_SESSIONS[i]
+        }
+    }
+}

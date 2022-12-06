@@ -46,3 +46,17 @@
     line-height: 24px;
     color: #20253A;
 }
+
+.custom-tooltip{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #FFFFFF;
+    background-color: #E60000;
+    padding: 7px;
+    border-radius: 0px;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 24px;
+    text-align: center;
+}
