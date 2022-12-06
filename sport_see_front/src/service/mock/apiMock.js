@@ -25,7 +25,6 @@ export function getUserAverageSessions(id) {
     }
 
     for (var i = 0; i < userAverageSessions.sessions.length; i++) {
-        console.log(userAverageSessions.sessions[i].day)
         switch (userAverageSessions.sessions[i].day) {
             case 1:
                 userAverageSessions.sessions[i].day = "L"
@@ -55,9 +54,35 @@ export function getUserAverageSessions(id) {
 }
 
 export function getUserPerformance(id){
+    var userPerformance
     for (var i = 0; i < USER_PERFORMANCE.length; i++) {
         if (USER_PERFORMANCE[i].userId === id) {
-            return USER_PERFORMANCE[i]
+            userPerformance = USER_PERFORMANCE[i]
         }
     }
+
+    for (var i = 0; i < userPerformance.data.length; i++) {
+        switch (userPerformance.data[i].kind) {
+            case 1:
+                userPerformance.data[i].kind = "Cardio"
+                break
+            case 2:
+                userPerformance.data[i].kind = "Energy"
+                break
+            case 3:
+                userPerformance.data[i].kind = "Endurance"
+                break
+            case 4:
+                userPerformance.data[i].kind = "Strength"
+                break
+            case 5:
+                userPerformance.data[i].kind = "Speed"
+                break
+            case 6:
+                userPerformance.data[i].kind = "Intensity"
+                break
+        }
+    }
+
+    return userPerformance
 }

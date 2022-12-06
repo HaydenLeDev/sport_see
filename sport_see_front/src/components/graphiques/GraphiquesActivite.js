@@ -1,4 +1,5 @@
-import '../../style/components/graphiques/GraphiquesActivite.css';
+//import '../../style/components/graphiques/GraphiquesActivite.css';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
 
 function GraphiquesActivite(props) {
@@ -7,7 +8,13 @@ function GraphiquesActivite(props) {
 
     return (
         <div className="GraphiquesActivite">
-            TEST
+            <ResponsiveContainer width="100%" height={263}>
+                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={userPerformance.data} fill="#FFFFFF" stroke="#FFFFFF">
+                    <PolarGrid stroke="#FFFFFF" radialLines="none"/>
+                    <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" fill="#FF0101B2" tickLine={false}/>
+                    <Radar dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.6} />
+                </RadarChart>
+            </ResponsiveContainer>
         </div>
     );
 }

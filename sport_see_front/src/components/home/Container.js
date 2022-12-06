@@ -1,7 +1,8 @@
 import '../../style/components/home/Container.css';
 import Title from './Title';
 import { useParams } from "react-router-dom";
-import { getUserById, getUserActivityById, getUserAverageSessions } from "../../service/mock/apiMock"
+import { getUserById, getUserActivityById, getUserAverageSessions,
+    getUserPerformance } from "../../service/mock/apiMock"
 import Graphiques from '../graphiques/Graphiques';
 
 function Container() {
