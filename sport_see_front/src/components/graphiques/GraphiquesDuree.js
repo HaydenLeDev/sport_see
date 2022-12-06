@@ -1,29 +1,28 @@
+import '../../style/components/graphiques/GraphiquesDuree.css';
+
 import {
     LineChart,
     Line,
     XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip, Legend,
+    Tooltip,
     ResponsiveContainer
 } from 'recharts';
 
 function GraphiquesDuree(props) {
 
     const userAverageSessions = props.userAverageSessions
-    console.log(userAverageSessions.sessions)
+
     return (
         <div className="GraphiquesDuree">
+            <ResponsiveContainer width="100%" height={263}>
             <LineChart
-                width={258}
-                height={263}
                 data={userAverageSessions.sessions}
             >
-                <XAxis axisLine={false} tickLine={false}  dataKey="day" />
-                <YAxis  hide={false} />
+                <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF"/>
                 <Tooltip />
-                <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" dot={false}/>
+                <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF" dot={false}/>
             </LineChart>
+            </ResponsiveContainer>
         </div>
     );
 }

@@ -14,7 +14,7 @@ import TooltipCustom from './TooltipCustom';
 function GraphUserActivity(props) {
 
     const sessionUser = props.sessionUser
-    console.log(sessionUser)
+
     return (
         <div className="GraphUserActivity">
             <GraphUserLegende />
