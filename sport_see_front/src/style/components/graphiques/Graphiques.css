@@ -10,6 +10,19 @@
     border-radius: 5px;
 }
 
+.GraphiquesInformation{
+    display: flex;
+    gap: 30px;
+}
+
+.GraphiquesDuree{
+    width: 258px;
+}
+
+.GraphiquesActivite{
+    width: 258px;
+}
+
 .Alimentation{
     display: flex;
     flex-direction: column;

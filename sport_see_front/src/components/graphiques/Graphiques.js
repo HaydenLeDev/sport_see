@@ -14,7 +14,7 @@ function Graphiques(props) {
         <div className="Graphiques">   
             <div className="Graphiques-graph">
                 <GraphUserActivity sessionUser={sessionUser}/>
-                <GraphiquesInformation userAverageSessions={userAverageSessions} userPerformance={userPerformance}/>
+                <GraphiquesInformation infoUser={infoUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance}/>
             </div>
             <Alimentation infoUser={infoUser} />
         </div>
