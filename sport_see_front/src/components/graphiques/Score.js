@@ -4,9 +4,7 @@ import "../../style/components/graphiques/Score.css"
 
 function Score(props) {
     const infoUser = props.infoUser
-    console.log(infoUser.score)
     const score = infoUser.score * 100 
-    console.log(score)
 
     const data = [
         { name: 'acti', score: score ,x: 1, fill: 'red' },
