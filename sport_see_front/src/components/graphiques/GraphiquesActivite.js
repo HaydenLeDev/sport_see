@@ -9,10 +9,10 @@ function GraphiquesActivite(props) {
     return (
         <div className="GraphiquesActivite">
             <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" data={userPerformance.data} fill="#FFFFFF" stroke="#FFFFFF">
-                    <PolarGrid stroke="#FFFFFF" radialLines="none"/>
-                    <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" fill="#FF0101B2" tickLine={false}/>
-                    <Radar dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.6} />
+                <RadarChart data={userPerformance.data} outerRadius={72} cx='50%' cy='50%'>
+                    <PolarGrid  radialLines={false} />
+                    <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" tickLine={false} tick={{ fontSize: 12 }}/>
+                    <Radar dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.7}  />
                 </RadarChart>
             </ResponsiveContainer>
         </div>

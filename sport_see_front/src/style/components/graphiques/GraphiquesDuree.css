@@ -2,3 +2,14 @@
     background-color: red;
     border-radius: 5px;
 }
+
+.custom-tooltip-duree{
+    background-color: white;
+    padding: 1px 7px 1px 7px;
+}
+
+.custom-tooltip-duree-min{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 24px;
+}
