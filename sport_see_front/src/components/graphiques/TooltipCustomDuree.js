@@ -6,7 +6,7 @@ function TooltipCustomDuree(props) {
     if (active && payload && payload.length) {
         return (
           <div className="custom-tooltip-duree">
-            <p className="custom-tooltip-duree-min">{`${payload[0].value}min`}</p>
+            <p className="custom-tooltip-duree-min">{`${payload[0].value} min`}</p>
           </div>
         )
       }

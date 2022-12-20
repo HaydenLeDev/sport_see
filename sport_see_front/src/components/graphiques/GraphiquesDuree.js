@@ -15,6 +15,7 @@ function GraphiquesDuree(props) {
     const userAverageSessions = props.userAverageSessions
     console.log(userAverageSessions)
     var average = 0
+    
 
     //calcule de la moyenne
     for(let i = 0 ; i < userAverageSessions.sessions.length ; i++){
@@ -23,8 +24,7 @@ function GraphiquesDuree(props) {
         userAverageSessions.sessions[i].sessionLength = average
     }
     for(let i = 0 ; i < userAverageSessions.sessions.length ; i++){
-        userAverageSessions.sessions[i].sessionLength = userAverageSessions.sessions[i].sessionLength / (i+1)
-        console.log( i + " : " + userAverageSessions.sessions[i].sessionLength)
+        userAverageSessions.sessions[i].sessionLength = Math.floor(userAverageSessions.sessions[i].sessionLength / (i+1))
     }
 
 
@@ -34,9 +34,9 @@ function GraphiquesDuree(props) {
             <LineChart
                 data={userAverageSessions.sessions}
             >
-                <YAxis />
+                <YAxis hide='true'/>
                 <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 14, right: 14  }}/>
-                <Tooltip content={<TooltipCustomDuree />}/>
+                <Tooltip content={<TooltipCustomDuree />} />
                 <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" strokeWidth={2} dot={false} activeDot={{stroke: 'rgba(255, 255, 255, 0.6)',r:4 , strokeWidth: 8}}/>
             </LineChart>
             </ResponsiveContainer>
