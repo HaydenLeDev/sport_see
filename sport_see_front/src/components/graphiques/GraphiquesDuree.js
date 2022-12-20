@@ -27,17 +27,19 @@ function GraphiquesDuree(props) {
         userAverageSessions.sessions[i].sessionLength = Math.floor(userAverageSessions.sessions[i].sessionLength / (i+1))
     }
 
-
     return (
         <div className="GraphiquesDuree">
             <ResponsiveContainer width="100%" height={263}>
             <LineChart
                 data={userAverageSessions.sessions}
             >
-                <YAxis hide='true'/>
-                <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 14, right: 14  }}/>
-                <Tooltip content={<TooltipCustomDuree />} />
-                <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" strokeWidth={2} dot={false} activeDot={{stroke: 'rgba(255, 255, 255, 0.6)',r:4 , strokeWidth: 8}}/>
+                <YAxis hide="false" domain={['dataMin - 5' , 'dataMax + 5']}/>
+                <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 10, right: 10  }}/>
+                <Tooltip content={<TooltipCustomDuree />}cursor={{ height: '1000px'}}/>
+                <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" 
+                    strokeWidth={2} dot={false} 
+                    activeDot={{stroke: 'rgba(255, 255, 255, 0.6)',r:4 , strokeWidth: 8}}
+                />
             </LineChart>
             </ResponsiveContainer>
         </div>
