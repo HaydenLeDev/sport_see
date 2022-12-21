@@ -13,14 +13,12 @@ import TooltipCustomDuree from './TooltipCustomDuree';
 function GraphiquesDuree(props) {
 
     const userAverageSessions = props.userAverageSessions
-    console.log(userAverageSessions)
     var average = 0
     
 
     //calcule de la moyenne
     for(let i = 0 ; i < userAverageSessions.sessions.length ; i++){
         average += userAverageSessions.sessions[i].sessionLength
-        console.log("moyenne sans div" + i + " " + average)
         userAverageSessions.sessions[i].sessionLength = average
     }
     for(let i = 0 ; i < userAverageSessions.sessions.length ; i++){
