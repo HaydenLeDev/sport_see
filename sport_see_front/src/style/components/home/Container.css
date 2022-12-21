@@ -6,6 +6,6 @@
     min-width: calc(1024px - 267px);
     display: flex;
     flex-direction: column;
-    gap: 77px;
+    gap: 30px;
 }
 

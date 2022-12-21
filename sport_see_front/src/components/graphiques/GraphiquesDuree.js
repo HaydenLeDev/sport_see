@@ -36,7 +36,7 @@ function GraphiquesDuree(props) {
             >
                 <YAxis hide="false" domain={['dataMin - 5' , 'dataMax + 12']}/>
                 <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 10, right: 10  }}/>
-                <Tooltip content={<TooltipCustomDuree />}cursor={{ height: '1000px'}}/>
+                <Tooltip content={<TooltipCustomDuree />} />
                 <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" 
                     strokeWidth={2} dot={false} 
                     activeDot={{stroke: 'rgba(255, 255, 255, 0.5)',r:4 , strokeWidth: 8}}
