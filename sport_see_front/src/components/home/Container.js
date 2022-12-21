@@ -4,8 +4,15 @@ import { useParams } from "react-router-dom";
 import { getUserById, getUserActivityById, getUserAverageSessions,
     getUserPerformance } from "../../service/mock/apiMock"
 import Graphiques from '../graphiques/Graphiques';
-
+import axios from 'axios'
 function Container() {
+    
+
+const apiUrl = "http://localhost:3000/user/12"
+
+axios.get(apiUrl).then((res)=> {
+    console.log(res)
+})
     const { id } = useParams()
     const infoUser = getUserById(parseInt(id))
     const userActivity = getUserActivityById(parseInt(id))
