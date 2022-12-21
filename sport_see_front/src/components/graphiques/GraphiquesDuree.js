@@ -39,7 +39,7 @@ function GraphiquesDuree(props) {
                 <Tooltip content={<TooltipCustomDuree />}cursor={{ height: '1000px'}}/>
                 <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" 
                     strokeWidth={2} dot={false} 
-                    activeDot={{stroke: 'rgba(255, 255, 255, 0.6)',r:4 , strokeWidth: 8}}
+                    activeDot={{stroke: 'rgba(255, 255, 255, 0.5)',r:4 , strokeWidth: 8}}
                 />
             </LineChart>
             </ResponsiveContainer>
