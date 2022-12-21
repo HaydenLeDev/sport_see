@@ -12,8 +12,8 @@ function Score(props) {
 
     return (
         <div className="Score">
-            
-            <RadialBarChart width={250} height={250} data={data}
+            <h2 className="Score-titre">Score</h2>
+            <RadialBarChart width={200} height={200} data={data}
                 innerRadius={150}
                 barSize={10}
                 startAngle={90}

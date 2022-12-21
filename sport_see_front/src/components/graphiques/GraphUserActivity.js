@@ -25,11 +25,11 @@ function GraphUserActivity(props) {
             <GraphUserLegende />
             <BarChart
                 width={750}
-                height={300}
+                height={200}
                 data={sessionUser}
             >
                 <XAxis axisLine={true} tickLine={false} tickSize={16} stroke={"#9B9EAC"} dataKey='day'/>
-                <YAxis dataKey="kilogram" yAxisId="kilogram" axisLine={false} tickLine={false} orientation="right" tickSize={20} domain={['dataMin-7', 'dataMax']} stroke={"#9B9EAC"} tickCount={3}/>
+                <YAxis dataKey="kilogram" yAxisId="kilogram" axisLine={false} tickLine={false} orientation="right" tickSize={20} domain={['dataMin-7', 'dataMax+2']} stroke={"#9B9EAC"} tickCount={3}/>
                 <YAxis dataKey="calories" yAxisId="calories" orientation="left" domain={['dataMin-150', 'dataMax+150']} hide="true"/>
                 <Tooltip content={<TooltipCustom />} />
                 <CartesianGrid strokeDasharray="2 2" horizontal={true} vertical={false} />
