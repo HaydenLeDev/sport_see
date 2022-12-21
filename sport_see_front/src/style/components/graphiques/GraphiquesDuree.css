@@ -1,6 +1,7 @@
 .GraphiquesDuree{
     background-color: red;
     border-radius: 5px;
+    position: relative;
 }
 
 .custom-tooltip-duree{
@@ -12,4 +13,15 @@
     font-weight: 500;
     font-size: 8px;
     line-height: 24px;
+}
+
+.GraphiquesDuree-titre{
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    font-size: 15px; 
+    line-height: 24px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
 }

@@ -29,11 +29,12 @@ function GraphiquesDuree(props) {
 
     return (
         <div className="GraphiquesDuree">
-            <ResponsiveContainer width="100%" height={263}>
+            <h2 className="GraphiquesDuree-titre">Durée moyenne des <br></br> sessions</h2>
+            <ResponsiveContainer width="100%" height={263} className="GraphiquesDuree-graph">
             <LineChart
                 data={userAverageSessions.sessions}
             >
-                <YAxis hide="false" domain={['dataMin - 5' , 'dataMax + 5']}/>
+                <YAxis hide="false" domain={['dataMin - 5' , 'dataMax + 12']}/>
                 <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 10, right: 10  }}/>
                 <Tooltip content={<TooltipCustomDuree />}cursor={{ height: '1000px'}}/>
                 <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" 
