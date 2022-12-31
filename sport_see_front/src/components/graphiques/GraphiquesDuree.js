@@ -11,11 +11,26 @@ import {
 import TooltipCustomDuree from './TooltipCustomDuree';
 
 function GraphiquesDuree(props) {
-
     const userAverageSessions = props.userAverageSessions
-    var average = 0
-    
+    let average = 0
 
+    const handleMouseMove = (event) => {
+        console.log(event)
+        if (event.isTooltipActive){
+            const { chartX, chartY } = event;
+            document.getElementById("GraphiquesDuree-background").style.left = chartX + "px"
+            document.getElementById("GraphiquesDuree-background").style.width = "100%"
+        } else {
+            document.getElementById("GraphiquesDuree-background").style.width = "0%"
+
+        }
+        
+        //console.log(chartX)
+      };
+
+    const positionActiveDotX = (event) =>{
+        console.log(event)
+    }
     //calcule de la moyenne
     for(let i = 0 ; i < userAverageSessions.sessions.length ; i++){
         average += userAverageSessions.sessions[i].sessionLength
@@ -28,17 +43,40 @@ function GraphiquesDuree(props) {
     return (
         <div className="GraphiquesDuree">
             <h2 className="GraphiquesDuree-titre">Durée moyenne des <br></br> sessions</h2>
+            <div id="GraphiquesDuree-background"></div>
             <ResponsiveContainer width="100%" height={263} className="GraphiquesDuree-graph">
             <LineChart
                 data={userAverageSessions.sessions}
+                onMouseMove={handleMouseMove}
             >
-                <YAxis hide="false" domain={['dataMin - 5' , 'dataMax + 12']}/>
-                <XAxis axisLine={false} tickLine={false}  dataKey="day" stroke="#FFFFFF67" padding={{ left: 10, right: 10  }}/>
-                <Tooltip content={<TooltipCustomDuree />} />
-                <Line type="monotone" dataKey="sessionLength" stroke="#FFFFFF67" 
-                    strokeWidth={2} dot={false} 
-                    activeDot={{stroke: 'rgba(255, 255, 255, 0.5)',r:4 , strokeWidth: 8}}
+                <YAxis 
+                    hide="false" 
+                    domain={['dataMin - 5' , 'dataMax + 12']}
                 />
+                <XAxis 
+                    axisLine={false} 
+                    tickLine={false}  
+                    dataKey="day" 
+                    stroke="#FFFFFF67" 
+                    padding={{ left: 10, right: 10  }}
+                />
+                <Tooltip 
+                    content={<TooltipCustomDuree />} 
+                    cursor={false} 
+                />
+                <Line  
+                    type="natural"  
+                    dataKey="sessionLength" 
+                    stroke="#FFFFFF67" 
+                    strokeWidth={2} 
+                    dot={false} 
+                    activeDot={{
+                        id: "test",
+                        stroke: 'rgba(255, 255, 255, 0.6)',
+                        r:4 , 
+                        strokeWidth: 8 }}
+                />
+
             </LineChart>
             </ResponsiveContainer>
         </div>

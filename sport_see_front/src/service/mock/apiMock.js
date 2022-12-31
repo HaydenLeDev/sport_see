@@ -24,28 +24,31 @@ export function getUserAverageSessions(id) {
         }
     }
 
-    for (var i = 0; i < userAverageSessions.sessions.length; i++) {
-        switch (userAverageSessions.sessions[i].day) {
+    for (var j = 0; j < userAverageSessions.sessions.length; j++) {
+        switch (userAverageSessions.sessions[j].day) {
             case 1:
-                userAverageSessions.sessions[i].day = "L"
+                userAverageSessions.sessions[j].day = "L"
                 break
             case 2:
-                userAverageSessions.sessions[i].day = "M"
+                userAverageSessions.sessions[j].day = "M"
                 break
             case 3:
-                userAverageSessions.sessions[i].day = "M"
+                userAverageSessions.sessions[j].day = "M"
                 break
             case 4:
-                userAverageSessions.sessions[i].day = "J"
+                userAverageSessions.sessions[j].day = "J"
                 break
             case 5:
-                userAverageSessions.sessions[i].day = "V"
+                userAverageSessions.sessions[j].day = "V"
                 break
             case 6:
-                userAverageSessions.sessions[i].day = "S"
+                userAverageSessions.sessions[j].day = "S"
                 break
             case 7:
-                userAverageSessions.sessions[i].day = "D"
+                userAverageSessions.sessions[j].day = "D"
+                break
+            default:
+                userAverageSessions.sessions[j].day = "L"
                 break
         }
     }
@@ -61,25 +64,25 @@ export function getUserPerformance(id){
         }
     }
 
-    for (var i = 0; i < userPerformance.data.length; i++) {
-        switch (userPerformance.data[i].kind) {
+    for (var j = 0; j < userPerformance.data.length; j++) {
+        switch (userPerformance.data[j].kind) {
             case 1:
-                userPerformance.data[i].kind = "Cardio"
+                userPerformance.data[j].kind = "Cardio"
                 break
             case 2:
-                userPerformance.data[i].kind = "Energy"
+                userPerformance.data[j].kind = "Energy"
                 break
             case 3:
-                userPerformance.data[i].kind = "Endurance"
+                userPerformance.data[j].kind = "Endurance"
                 break
             case 4:
-                userPerformance.data[i].kind = "Strength"
+                userPerformance.data[j].kind = "Strength"
                 break
             case 5:
-                userPerformance.data[i].kind = "Speed"
+                userPerformance.data[j].kind = "Speed"
                 break
             case 6:
-                userPerformance.data[i].kind = "Intensity"
+                userPerformance.data[j].kind = "Intensity"
                 break
         }
     }

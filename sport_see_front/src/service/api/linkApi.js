@@ -1,13 +1,48 @@
 import axios from 'axios'
 
-const apiUrl = "http://localhost:3000/user/12"
 
-axios.get(apiUrl).then((res)=> {
-    console.log(res)
-})
+export const getApiUserById = async (id) => {
+    try {
+		return res.data;
+	} catch (e) {
+		console.log(e);
+	}
+}
+
+export async function getApiUserActivityById(id) {
+    try{
+        var apiUrl = "http://localhost:3000/user/" + id + "/activity"
+        const { data } = await axios.get(apiUrl)
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function getApiUserAverageSessions(id) {
+    try{
+        var apiUrl = "http://localhost:3000/user/" + id + "/average-sessions"
+        const { data } = await axios.get(apiUrl)
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function getApiUserPerformance(id){
+    try{
+        var apiUrl = "http://localhost:3000/user/" + id + "/performance"
+        const { data } = await axios.get(apiUrl)
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 /** 
-import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from "./dataMock"
 
 export function getUserById(id) {
     for (var i = 0; i < USER_MAIN_DATA.length; i++) {
