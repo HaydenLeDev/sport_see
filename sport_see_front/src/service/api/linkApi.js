@@ -1,46 +1,15 @@
 import axios from 'axios'
+import { useEffect, useState } from 'react';
 
 
-export const getApiUserById = async (id) => {
-    try {
-		return res.data;
-	} catch (e) {
-		console.log(e);
-	}
+export async function getUserByIdApi(id) {
+        const infoUserResult = await axios(
+            "http://localhost:3000/user/" + id,
+        )
+
+    return infoUserResult
 }
 
-export async function getApiUserActivityById(id) {
-    try{
-        var apiUrl = "http://localhost:3000/user/" + id + "/activity"
-        const { data } = await axios.get(apiUrl)
-        console.log(data)
-        return data
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-export async function getApiUserAverageSessions(id) {
-    try{
-        var apiUrl = "http://localhost:3000/user/" + id + "/average-sessions"
-        const { data } = await axios.get(apiUrl)
-        console.log(data)
-        return data
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-export async function getApiUserPerformance(id){
-    try{
-        var apiUrl = "http://localhost:3000/user/" + id + "/performance"
-        const { data } = await axios.get(apiUrl)
-        console.log(data)
-        return data
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 /** 
 
