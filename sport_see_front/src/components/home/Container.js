@@ -1,10 +1,10 @@
 import '../../style/components/home/Container.css';
 import Title from './Title';
 import { useParams } from "react-router-dom";
-import {
-    getUserById, getUserActivityById, getUserAverageSessions,
-    getUserPerformance
-} from "../../service/mock/apiMock"
+//import {
+//    getUserById, getUserActivityById, getUserAverageSessions,
+//    getUserPerformance
+//} from "../../service/mock/apiMock"
 import Graphiques from '../graphiques/Graphiques';
 import { getUserByIdApi } from '../../service/api/linkApi'
 import { useEffect, useState } from 'react';
@@ -25,7 +25,7 @@ function Container() {
         const fetchData = async ()=>{
             const infoUserResult = await axios(
                 "http://localhost:3000/user/" + id,
-            )
+            )   
             setInfoUser(infoUserResult.data.data)
 
             const userActivityResult = await axios(
@@ -46,7 +46,6 @@ function Container() {
             setLoading(false)
         }
         fetchData()
-        
     }, [])
 
     //const infoUser = getUserById(parseInt(id))
@@ -63,14 +62,14 @@ function Container() {
             </div>
         )
     } else{
-        console.log("infoUser")
-        console.log(infoUser)
-        console.log("userActivity")
-        console.log(userActivity)
-        console.log("userAverageSessions")
-        console.log(userAverageSessions)
-        console.log("userPerformance")
-        console.log(userPerformance)
+        //console.log("infoUser")
+        //console.log(infoUser)
+        //console.log("userActivity")
+        //console.log(userActivity)
+        //console.log("userAverageSessions")
+        //console.log(userAverageSessions)
+        //console.log("userPerformance")
+        //console.log(userPerformance)
         const sessionUser = userActivity.sessions
         const isNiceDay = sessionUser[sessionUser.length - 1].calories > sessionUser[sessionUser.length - 2].calories
         return (
@@ -79,14 +78,6 @@ function Container() {
                 <Graphiques infoUser={infoUser} sessionUser={sessionUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance} />
             </div>
             );
-        /** 
-        return (
-        <div className="Container">
-            <Title name={infoUser.userInfos.firstName} isNiceDay={isNiceDay} />
-            <Graphiques infoUser={infoUser} sessionUser={sessionUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance} />
-        </div>
-        ); 
-        */
     }
        
 }

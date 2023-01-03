@@ -4,8 +4,12 @@ import "../../style/components/graphiques/Score.css"
 
 function Score(props) {
     const infoUser = props.infoUser
-    const score = infoUser.score * 100 
-
+    var score = infoUser.score * 100 
+    console.log(infoUser)
+    if (isNaN(score)){
+        var score = infoUser.todayScore * 100
+    }
+    
     const data = [
         { name: 'acti', score: score ,x: 1, fill: 'red' },
     ];

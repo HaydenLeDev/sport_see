@@ -13,7 +13,31 @@ import TooltipCustomDuree from './TooltipCustomDuree';
 function GraphiquesDuree(props) {
     const userAverageSessions = props.userAverageSessions
     let average = 0
-
+    for (var i = 0; i < userAverageSessions.sessions.length; i++) {
+        switch (userAverageSessions.sessions[i].day) {
+            case 1:
+                userAverageSessions.sessions[i].day = "L"
+                break
+            case 2:
+                userAverageSessions.sessions[i].day = "M"
+                break
+            case 3:
+                userAverageSessions.sessions[i].day = "M"
+                break
+            case 4:
+                userAverageSessions.sessions[i].day = "J"
+                break
+            case 5:
+                userAverageSessions.sessions[i].day = "V"
+                break
+            case 6:
+                userAverageSessions.sessions[i].day = "S"
+                break
+            case 7:
+                userAverageSessions.sessions[i].day = "D"
+                break
+        }
+    }
     const handleMouseMove = (event) => {
         console.log(event)
         if (event.isTooltipActive){
@@ -48,6 +72,8 @@ function GraphiquesDuree(props) {
             <LineChart
                 data={userAverageSessions.sessions}
                 onMouseMove={handleMouseMove}
+                width="100%"    
+                padding={{ left: 0, right: 0  }}
             >
                 <YAxis 
                     hide="false" 
@@ -58,7 +84,7 @@ function GraphiquesDuree(props) {
                     tickLine={false}  
                     dataKey="day" 
                     stroke="#FFFFFF67" 
-                    padding={{ left: 10, right: 10  }}
+                    
                 />
                 <Tooltip 
                     content={<TooltipCustomDuree />} 
@@ -74,7 +100,7 @@ function GraphiquesDuree(props) {
                         id: "test",
                         stroke: 'rgba(255, 255, 255, 0.6)',
                         r:4 , 
-                        strokeWidth: 8 }}
+                        strokeWidth: 8 }}    
                 />
 
             </LineChart>

@@ -3,13 +3,11 @@ import { useEffect, useState } from 'react';
 
 
 export async function getUserByIdApi(id) {
-        const infoUserResult = await axios(
-            "http://localhost:3000/user/" + id,
-        )
-
+    const infoUserResult = await axios(
+        "http://localhost:3000/user/" + id,
+    )
     return infoUserResult
 }
-
 
 /** 
 

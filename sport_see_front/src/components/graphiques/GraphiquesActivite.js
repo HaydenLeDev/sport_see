@@ -5,7 +5,28 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 function GraphiquesActivite(props) {
 
     const userPerformance = props.userPerformance
-
+    for (var i = 0; i < userPerformance.data.length; i++) {
+        switch (userPerformance.data[i].kind) {
+            case 1:
+                userPerformance.data[i].kind = "Cardio"
+                break
+            case 2:
+                userPerformance.data[i].kind = "Energy"
+                break
+            case 3:
+                userPerformance.data[i].kind = "Endurance"
+                break
+            case 4:
+                userPerformance.data[i].kind = "Strength"
+                break
+            case 5:
+                userPerformance.data[i].kind = "Speed"
+                break
+            case 6:
+                userPerformance.data[i].kind = "Intensity"
+                break
+        }
+    }
     return (
         <div className="GraphiquesActivite">
             <ResponsiveContainer width="100%" height="100%">
