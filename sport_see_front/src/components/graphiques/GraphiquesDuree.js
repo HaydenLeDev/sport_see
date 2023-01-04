@@ -6,7 +6,8 @@ import {
     XAxis,
     Tooltip,
     ResponsiveContainer,
-    YAxis
+    YAxis,
+    LinearGradient
 } from 'recharts';
 import TooltipCustomDuree from './TooltipCustomDuree';
 
@@ -40,11 +41,16 @@ function GraphiquesDuree(props) {
     }
     const handleMouseMove = (event) => {
         //console.log(event)
+        
         if (event.isTooltipActive) {
             const { chartX, chartY } = event;
-            var position = document.getElementById("test").cx.animVal.value
-            document.getElementById("GraphiquesDuree-background").style.left = position + "px"
-            document.getElementById("GraphiquesDuree-background").style.width = "100%"
+            if (document.getElementById("test").cx == null){
+                
+            } else {
+                var position = document.getElementById("test").cx.animVal.value
+                document.getElementById("GraphiquesDuree-background").style.left = position + "px"
+                document.getElementById("GraphiquesDuree-background").style.width = "110%"
+            }
         } else {
             document.getElementById("GraphiquesDuree-background").style.width = "0%"
 
@@ -70,6 +76,12 @@ function GraphiquesDuree(props) {
                     data={userAverageSessions.sessions}
                     onMouseMove={handleMouseMove}
                 >
+                    <defs>
+                        <linearGradient id="lineColor" x1="0%" y1="0" x2="100%" y2="0">
+                            <stop offset="0%" stopColor="#FFFFFF1B"/>
+                            <stop offset="80%" stopColor="white" />
+                        </linearGradient>
+                    </defs>
                     <YAxis
                         hide="false"
                         domain={['dataMin - 5', 'dataMax + 12']}
@@ -90,7 +102,7 @@ function GraphiquesDuree(props) {
                     <Line
                         type="natural"
                         dataKey="sessionLength"
-                        stroke='white'
+                        stroke="url(#lineColor)"
                         strokeWidth={2}
                         dot={false}
                         activeDot={{
