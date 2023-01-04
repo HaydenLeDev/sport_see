@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 import Graphiques from '../graphiques/Graphiques';
 import { getUserByIdApi, getUserActivityByIdApi, getUserAverageSessionsApi, getUserPerformanceApi } from '../../service/api/linkApi'
 import { useEffect, useState } from 'react';
-import axios from 'axios'
 
 
 
@@ -39,7 +38,7 @@ function Container() {
             setLoading(false)
        }
        fetchData()
-    }, [])
+    }, [id])
 
     //const infoUser = getUserById(parseInt(id))
     //const userActivity = getUserActivityById(parseInt(id))

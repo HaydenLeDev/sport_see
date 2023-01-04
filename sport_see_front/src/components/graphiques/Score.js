@@ -6,7 +6,7 @@ function Score(props) {
     const infoUser = props.infoUser
     var score = infoUser.score * 100 
     if (isNaN(score)){
-        var score = infoUser.todayScore * 100
+        score = infoUser.todayScore * 100
     }
     
     const data = [

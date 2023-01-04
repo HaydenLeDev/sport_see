@@ -7,7 +7,6 @@ import {
     Tooltip,
     ResponsiveContainer,
     YAxis,
-    LinearGradient
 } from 'recharts';
 import TooltipCustomDuree from './TooltipCustomDuree';
 
@@ -37,13 +36,16 @@ function GraphiquesDuree(props) {
             case 7:
                 userAverageSessions.sessions[i].day = "D"
                 break
+            default:
+                userAverageSessions.sessions[i].day = "D"
+                break
         }
     }
     const handleMouseMove = (event) => {
         //console.log(event)
 
         if (event.isTooltipActive) {
-            const { chartX, chartY } = event;
+            //const { chartX, chartY } = event;
             var position = document.getElementById("dotActive").cx.animVal.value
             document.getElementById("GraphiquesDuree-background").style.left = position + "px"
             document.getElementById("GraphiquesDuree-background").style.width = "110%"
@@ -52,8 +54,6 @@ function GraphiquesDuree(props) {
             document.getElementById("GraphiquesDuree-background").style.width = "0%"
 
         }
-
-        //console.log(chartX)
     };
     //calcule de la moyenne
     for (let i = 0; i < userAverageSessions.sessions.length; i++) {
