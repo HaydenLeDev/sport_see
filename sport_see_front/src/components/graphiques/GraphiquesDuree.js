@@ -41,16 +41,13 @@ function GraphiquesDuree(props) {
     }
     const handleMouseMove = (event) => {
         //console.log(event)
-        
+
         if (event.isTooltipActive) {
             const { chartX, chartY } = event;
-            if (document.getElementById("test").cx == null){
-                
-            } else {
-                var position = document.getElementById("test").cx.animVal.value
-                document.getElementById("GraphiquesDuree-background").style.left = position + "px"
-                document.getElementById("GraphiquesDuree-background").style.width = "110%"
-            }
+            var position = document.getElementById("test").cx.animVal.value
+            document.getElementById("GraphiquesDuree-background").style.left = position + "px"
+            document.getElementById("GraphiquesDuree-background").style.width = "110%"
+
         } else {
             document.getElementById("GraphiquesDuree-background").style.width = "0%"
 
@@ -78,7 +75,7 @@ function GraphiquesDuree(props) {
                 >
                     <defs>
                         <linearGradient id="lineColor" x1="0%" y1="0" x2="100%" y2="0">
-                            <stop offset="0%" stopColor="#FFFFFF1B"/>
+                            <stop offset="0%" stopColor="#FFFFFF1B" />
                             <stop offset="80%" stopColor="white" />
                         </linearGradient>
                     </defs>
