@@ -34,3 +34,17 @@
     background-color: black;
     opacity: 0.2;
 }
+
+.GraphiquesDuree-jours{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 28px);
+    padding: 10px 14px 10px 14px;
+}
+
+.GraphiquesDuree-jours p{
+    color: #FFFFFF67;
+
+}
