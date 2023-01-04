@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 //    getUserPerformance
 //} from "../../service/mock/apiMock"
 import Graphiques from '../graphiques/Graphiques';
-import { getUserByIdApi } from '../../service/api/linkApi'
+import { getUserByIdApi, getUserActivityByIdApi, getUserAverageSessionsApi, getUserPerformanceApi } from '../../service/api/linkApi'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
@@ -22,6 +22,7 @@ function Container() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() =>{
+        /*
         const fetchData = async ()=>{
             const infoUserResult = await axios(
                 "http://localhost:3000/user/" + id,
@@ -46,6 +47,24 @@ function Container() {
             setLoading(false)
         }
         fetchData()
+        */
+       const fetchData = async() => {
+            const infoUserResult = await getUserByIdApi(id)
+            setInfoUser(infoUserResult.data.data)
+
+            const userActivityResult = await getUserActivityByIdApi(id)
+            setUserActivity(userActivityResult.data.data)
+
+
+            const userAverageSessionsResult = await getUserAverageSessionsApi(id)
+            setUserAverageSessions(userAverageSessionsResult.data.data)
+
+            const userPerformanceResult = await getUserPerformanceApi(id)
+            setUserPerformance(userPerformanceResult.data.data)
+
+            setLoading(false)
+       }
+       fetchData()
     }, [])
 
     //const infoUser = getUserById(parseInt(id))
@@ -62,14 +81,15 @@ function Container() {
             </div>
         )
     } else{
-        //console.log("infoUser")
-        //console.log(infoUser)
-        //console.log("userActivity")
-        //console.log(userActivity)
-        //console.log("userAverageSessions")
-        //console.log(userAverageSessions)
-        //console.log("userPerformance")
-        //console.log(userPerformance)
+        console.log("infoUser")
+        console.log(infoUser)
+        console.log("userActivity")
+        console.log(userActivity)
+        console.log("userAverageSessions")
+        console.log(userAverageSessions)
+        console.log("userPerformance")
+        console.log(userPerformance)
+
         const sessionUser = userActivity.sessions
         const isNiceDay = sessionUser[sessionUser.length - 1].calories > sessionUser[sessionUser.length - 2].calories
         return (
@@ -77,7 +97,7 @@ function Container() {
                 <Title name={infoUser.userInfos.firstName} isNiceDay={isNiceDay}/>
                 <Graphiques infoUser={infoUser} sessionUser={sessionUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance} />
             </div>
-            );
+        );
     }
        
 }

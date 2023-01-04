@@ -5,7 +5,6 @@ import "../../style/components/graphiques/Score.css"
 function Score(props) {
     const infoUser = props.infoUser
     var score = infoUser.score * 100 
-    console.log(infoUser)
     if (isNaN(score)){
         var score = infoUser.todayScore * 100
     }
