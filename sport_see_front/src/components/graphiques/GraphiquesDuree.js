@@ -44,7 +44,7 @@ function GraphiquesDuree(props) {
 
         if (event.isTooltipActive) {
             const { chartX, chartY } = event;
-            var position = document.getElementById("test").cx.animVal.value
+            var position = document.getElementById("dotActive").cx.animVal.value
             document.getElementById("GraphiquesDuree-background").style.left = position + "px"
             document.getElementById("GraphiquesDuree-background").style.width = "110%"
 
@@ -103,7 +103,7 @@ function GraphiquesDuree(props) {
                         strokeWidth={2}
                         dot={false}
                         activeDot={{
-                            id: "test",
+                            id: "dotActive",
                             stroke: 'rgba(255, 255, 255, 0.6)',
                             r: 4,
                             strokeWidth: 8
