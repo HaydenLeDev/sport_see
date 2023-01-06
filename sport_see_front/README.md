@@ -8,7 +8,10 @@ Partie front-end du projet 12 : Développez un tableau de bord d'analytics avec 
 * [Installation](#Installation)
 
 ## Technologies
-
+Project is created with:
+* Node: 12.3
+* React: 12.3
+* Recharts: 2.33
 
 
 ## Prérequis
