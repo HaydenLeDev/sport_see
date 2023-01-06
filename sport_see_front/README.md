@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+# SportSee Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prérequis
 
-## Available Scripts
 
 In the project directory, you can run:
 
