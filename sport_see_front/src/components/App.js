@@ -5,6 +5,11 @@ import Home from './home/Home'
 import Header from "./header/Header"
 import Container from './home/Container';
 
+
+/**
+ * Contains the routes and all our application.
+ * @returns app
+ */
 function App() {
   return (
     <div className="App">

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo"
 
+/**
+ * Horizontal menu
+ * @returns MenuHorizontal
+ */
 function MenuHorizontal() {
     return (
         <div className="MenuHorizontal">

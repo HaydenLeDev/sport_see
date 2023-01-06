@@ -4,7 +4,10 @@ import logoVeloLink from "../../assets/icon_velo.png"
 import logoMusculationLink from "../../assets/icon_musculation.png"
 
 
-
+/**
+ * Contains the different elements of the vertical menu.
+ * @returns MenuVertical
+ */
 function MenuVertical() {
     return (
         <div className="MenuVertical">

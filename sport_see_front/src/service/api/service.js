@@ -1,6 +1,14 @@
+/**
+* Service making the various calls to the API.
+*/
+
 import axios from 'axios'
 
-
+/**
+ * Get user data
+ * @param {string} id 
+ * @returns {object} Response
+ */
 export const getUserByIdApi = async(id) =>{
     try{
         const reponse = await axios(
@@ -12,6 +20,11 @@ export const getUserByIdApi = async(id) =>{
     }
 }
 
+/**
+ * Get the activities of a user according to his id
+ * @param {string} id 
+ * @returns {object} Response
+ */
 export const getUserActivityByIdApi = async(id) =>{
     try{
         const reponse = await axios(
@@ -23,6 +36,11 @@ export const getUserActivityByIdApi = async(id) =>{
     }
 }
 
+/**
+ * Get the times of each session for a user according to his id
+ * @param {string} id 
+ * @returns {object} Response
+ */
 export const getUserAverageSessionsApi = async(id) =>{
     try{
         const reponse = await axios(
@@ -34,6 +52,11 @@ export const getUserAverageSessionsApi = async(id) =>{
     }
 }
 
+/**
+ * Get user performance data based on his id.
+ * @param {string} id 
+ * @returns {object} Response
+ */
 export const getUserPerformanceApi = async(id) =>{
     try{
         const reponse = await axios(

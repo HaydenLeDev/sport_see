@@ -6,11 +6,14 @@ import { useParams } from "react-router-dom";
 //    getUserPerformance
 //} from "../../service/mock/apiMock"
 import Graphiques from '../graphiques/Graphiques';
-import { getUserByIdApi, getUserActivityByIdApi, getUserAverageSessionsApi, getUserPerformanceApi } from '../../service/api/linkApi'
+import { getUserByIdApi, getUserActivityByIdApi, getUserAverageSessionsApi, getUserPerformanceApi } from '../../service/api/service'
 import { useEffect, useState } from 'react';
 
 
-
+/**
+ * 
+ * @returns 
+ */
 function Container() {
     const { id } = useParams()
 

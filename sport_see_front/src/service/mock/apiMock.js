@@ -1,5 +1,14 @@
+/**
+ * Mock API calls.
+ */
+
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from "./dataMock"
 
+/**
+ * Get user data
+ * @param {string} id 
+ * @returns data
+ */
 export function getUserById(id) {
     for (var i = 0; i < USER_MAIN_DATA.length; i++) {
         if (USER_MAIN_DATA[i].id === id) {
@@ -8,6 +17,11 @@ export function getUserById(id) {
     }
 }
 
+/**
+ * Get the activities of a user according to his id
+ * @param {string} id 
+ * @returns data
+ */
 export function getUserActivityById(id) {
     for (var i = 0; i < USER_ACTIVITY.length; i++) {
         if (USER_ACTIVITY[i].userId === id) {
@@ -16,6 +30,11 @@ export function getUserActivityById(id) {
     }
 }
 
+/**
+ * Get the times of each session for a user according to his id
+ * @param {string} id 
+ * @returns data
+ */
 export function getUserAverageSessions(id) {
     var userAverageSessions
     for (var i = 0; i < USER_AVERAGE_SESSIONS.length; i++) {
@@ -56,6 +75,11 @@ export function getUserAverageSessions(id) {
     return userAverageSessions
 }
 
+/**
+ * Get user performance data based on his id. 
+ * @param {string} id 
+ * @returns data 
+ */
 export function getUserPerformance(id){
     var userPerformance
     for (var i = 0; i < USER_PERFORMANCE.length; i++) {

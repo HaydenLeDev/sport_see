@@ -1,5 +1,9 @@
 import logoLink from "../../assets/logo.png" 
 
+/**
+ * Contains the app logo.
+ * @returns Logo
+ */
 function Logo() {
     return (
         <div className="Logo">

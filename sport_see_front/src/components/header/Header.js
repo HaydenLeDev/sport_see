@@ -1,10 +1,14 @@
-import Menu from "./MenuHorizontal"
+import MenuHorizontal from "./MenuHorizontal"
 import MenuVertical from "./MenuVertical"
 
+/**
+ * Contains both menu, vertical and horizontal.
+ * @returns Header
+ */
 function Header() {
     return (
         <div className="Header">
-            <Menu />
+            <MenuHorizontal />
             <MenuVertical />
         </div>
     );
