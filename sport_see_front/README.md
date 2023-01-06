@@ -9,11 +9,14 @@ Partie front-end du projet 12 : Développez un tableau de bord d'analytics avec 
 
 ## Technologies
 Project is created with:
-* Node: 12.3
-* React: 12.3
-* Recharts: 2.33
+* Node: 9.1.1
+* React: 18.2.0
+* Recharts: 2.1.16
+* Axios: 1.2.1
 
 
 ## Prérequis
+* Installation de NodeJS
+* Lancer le projet Back-End
 
 ## Installation 
