@@ -1,4 +1,4 @@
-.MenuHorizontal{
+.MenuHorizontal {
     position: absolute;
     background-color: #020203;
     width: calc(100% - 60px);
@@ -8,21 +8,21 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.MenuHorizontal-Layout{
+.MenuHorizontal-Layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #FFFFFF;
+    color: #ffffff;
     min-width: 1024px;
 }
 
-.MenuHorizontal-Items{
+.MenuHorizontal-Items {
     font-weight: 500;
     font-size: 24px;
     line-height: 24px;
 }
 
-.MenuVertical{
+.MenuVertical {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -30,13 +30,13 @@
     left: 0;
     background-color: #020203;
     width: calc(117px - 52px);
-    padding: 0px 26px 60px 26px; 
+    padding: 0px 26px 60px 26px;
     height: calc(100% - 60px);
     min-height: 780px;
-    color: #FFFFFF; 
+    color: #ffffff;
 }
 
-.MenuVertical-Layout{
+.MenuVertical-Layout {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     gap: 20px;
 }
 
-.MenuVertical p{
+.MenuVertical p {
     transform: rotate(-90deg);
     font-size: 12px;
     line-height: 24px;
@@ -56,12 +56,10 @@
 }
 
 a:visited {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-
-.Logo-image{
+.Logo-image {
     width: 178px;
     z-index: 2;
 }
-

@@ -1,33 +1,33 @@
-.GraphiquesDuree{
+.GraphiquesDuree {
     background-color: red;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
 
-.custom-tooltip-duree{
+.custom-tooltip-duree {
     background-color: white;
     padding: 1px 7px 1px 7px;
 }
 
-.custom-tooltip-duree-min{
+.custom-tooltip-duree-min {
     font-weight: 500;
     font-size: 8px;
     line-height: 24px;
 }
 
-.GraphiquesDuree-titre{
+.GraphiquesDuree-titre {
     position: absolute;
     top: 29px;
     left: 34px;
-    font-size: 15px; 
+    font-size: 15px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.5;
 }
 
-#GraphiquesDuree-background{
+#GraphiquesDuree-background {
     position: absolute;
     width: 0%;
     height: 100%;
@@ -35,7 +35,7 @@
     opacity: 0.2;
 }
 
-.GraphiquesDuree-jours{
+.GraphiquesDuree-jours {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -44,7 +44,6 @@
     padding: 10px 14px 10px 14px;
 }
 
-.GraphiquesDuree-jours p{
-    color: #FFFFFF67;
-
+.GraphiquesDuree-jours p {
+    color: #ffffff67;
 }

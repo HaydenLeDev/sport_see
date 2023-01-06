@@ -8,18 +8,18 @@ import PropTypes from 'prop-types'
  * @param {array} active 
  * @returns TooltipCustom
  */
-function TooltipCustom({active, payload}) {
+function TooltipCustom({ active, payload }) {
 
-    if (active && payload && payload.length) {
-        return (
-          <div className="custom-tooltip">
-            <p className="kilogramme">{`${payload[0].value}kg`}</p>
-            <p className="calorie">{`${payload[1].value}Kcal`}</p>
-          </div>
-        )
-      }
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="kilogramme">{`${payload[0].value}kg`}</p>
+        <p className="calorie">{`${payload[1].value}Kcal`}</p>
+      </div>
+    )
+  }
 
-    return null
+  return null
 }
 
 TooltipCustom.propTypes = {
@@ -27,4 +27,4 @@ TooltipCustom.propTypes = {
   payload: PropTypes.array
 }
 
-export default TooltipCustom;
+export default TooltipCustom

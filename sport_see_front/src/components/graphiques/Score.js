@@ -8,15 +8,15 @@ import PropTypes from 'prop-types'
  * @param {object} infoUser 
  * @returns Score
  */
-function Score({infoUser}) {
+function Score({ infoUser }) {
 
-    var score = infoUser.score * 100 
-    if (isNaN(score)){
+    var score = infoUser.score * 100
+    if (isNaN(score)) {
         score = infoUser.todayScore * 100
     }
-    
+
     const data = [
-        { name: 'acti', score: score ,x: 1, fill: 'red' },
+        { name: 'acti', score: score, x: 1, fill: 'red' },
     ];
 
     return (
@@ -38,7 +38,7 @@ function Score({infoUser}) {
                     cornerRadius={5}
                 />
             </RadialBarChart>
-            <ScoreLegend score={score}/>
+            <ScoreLegend score={score} />
         </div>
     );
 }

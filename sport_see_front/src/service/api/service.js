@@ -9,13 +9,13 @@ import axios from 'axios'
  * @param {string} id 
  * @returns {object} Response
  */
-export const getUserByIdApi = async(id) =>{
-    try{
+export const getUserByIdApi = async (id) => {
+    try {
         const reponse = await axios(
             "http://localhost:3000/user/" + id,
         )
         return reponse
-    } catch(error){
+    } catch (error) {
         console.log(error)
     }
 }
@@ -25,13 +25,13 @@ export const getUserByIdApi = async(id) =>{
  * @param {string} id 
  * @returns {object} Response
  */
-export const getUserActivityByIdApi = async(id) =>{
-    try{
+export const getUserActivityByIdApi = async (id) => {
+    try {
         const reponse = await axios(
-            "http://localhost:3000/user/"+ id + "/activity",
+            "http://localhost:3000/user/" + id + "/activity",
         )
         return reponse
-    } catch(error){
+    } catch (error) {
         console.log(error)
     }
 }
@@ -41,13 +41,13 @@ export const getUserActivityByIdApi = async(id) =>{
  * @param {string} id 
  * @returns {object} Response
  */
-export const getUserAverageSessionsApi = async(id) =>{
-    try{
+export const getUserAverageSessionsApi = async (id) => {
+    try {
         const reponse = await axios(
-            "http://localhost:3000/user/"+ id + "/average-sessions",
+            "http://localhost:3000/user/" + id + "/average-sessions",
         )
         return reponse
-    } catch(error){
+    } catch (error) {
         console.log(error)
     }
 }
@@ -57,13 +57,13 @@ export const getUserAverageSessionsApi = async(id) =>{
  * @param {string} id 
  * @returns {object} Response
  */
-export const getUserPerformanceApi = async(id) =>{
-    try{
+export const getUserPerformanceApi = async (id) => {
+    try {
         const reponse = await axios(
-            "http://localhost:3000/user/"+ id + "/performance",
+            "http://localhost:3000/user/" + id + "/performance",
         )
         return reponse
-    } catch(error){
+    } catch (error) {
         console.log(error)
     }
 }

@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
  * @param {string} unite 
  * @returns DataItem
  */
-function DataItem({number, scrImage, text, unite}) {
+function DataItem({ number, scrImage, text, unite }) {
 
     /*
     const number = new Intl.NumberFormat("en-IN").format(props.number)

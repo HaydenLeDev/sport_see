@@ -11,7 +11,7 @@ function Home() {
         <div className="Home">
             <ChoiceProfil />
         </div>
-    );
+    )
 }
 
-export default Home;
+export default Home

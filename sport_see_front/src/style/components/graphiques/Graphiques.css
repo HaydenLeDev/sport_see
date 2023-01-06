@@ -1,45 +1,45 @@
-.Graphiques{
+.Graphiques {
     display: flex;
     width: calc(100% - 107px);
     justify-content: space-between;
     margin-left: 107px;
 }
 
-.Graphiques-graph{
+.Graphiques-graph {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.GraphiquesActivite{
-    background-color: #282D30;
+.GraphiquesActivite {
+    background-color: #282d30;
     border-radius: 5px;
 }
 
-.GraphiquesInformation{
+.GraphiquesInformation {
     display: flex;
     gap: 30px;
 }
 
-.GraphiquesDuree{
+.GraphiquesDuree {
     width: 258px;
 }
 
-.GraphiquesActivite{
+.GraphiquesActivite {
     width: 258px;
 }
 
-.GraphUserActivity{
+.GraphUserActivity {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #FBFBFB;
+    background: #fbfbfb;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
     padding: 0px 32px 0px 32px;
 }
 
-.Alimentation{
+.Alimentation {
     display: flex;
     flex-direction: column;
     width: 258px;

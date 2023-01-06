@@ -12,13 +12,13 @@ import PropTypes from 'prop-types'
  * @param {object} infoUser 
  * @returns Alimentation
  */
-function Alimentation({infoUser}) {
+function Alimentation({ infoUser }) {
     return (
-        <div className="Alimentation">   
-            <DataItem scrImage={iconeCal} number={infoUser.keyData.calorieCount} unite="kCal" text="Calories"/>
-            <DataItem scrImage={iconeProt} number={infoUser.keyData.proteinCount} unite="g" text="Proteines"/>
-            <DataItem scrImage={iconeGlucide} number={infoUser.keyData.carbohydrateCount} unite="g" text="Glucides"/>
-            <DataItem scrImage={iconeLipides} number={infoUser.keyData.lipidCount} unite="g" text="Lipides"/>
+        <div className="Alimentation">
+            <DataItem scrImage={iconeCal} number={infoUser.keyData.calorieCount} unite="kCal" text="Calories" />
+            <DataItem scrImage={iconeProt} number={infoUser.keyData.proteinCount} unite="g" text="Proteines" />
+            <DataItem scrImage={iconeGlucide} number={infoUser.keyData.carbohydrateCount} unite="g" text="Glucides" />
+            <DataItem scrImage={iconeLipides} number={infoUser.keyData.lipidCount} unite="g" text="Lipides" />
         </div>
     );
 }

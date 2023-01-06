@@ -16,9 +16,9 @@ import PropTypes from 'prop-types'
  * @param {array} sessionUser 
  * @returns GraphUserActivity
  */
-function GraphUserActivity({sessionUser}) {
+function GraphUserActivity({ sessionUser }) {
     //Mise les index des jours
-    for(let i = 0; i < sessionUser.length; i++){
+    for (let i = 0; i < sessionUser.length; i++) {
         sessionUser[i].day = i + 1
     }
 
@@ -30,9 +30,9 @@ function GraphUserActivity({sessionUser}) {
                 height={200}
                 data={sessionUser}
             >
-                <XAxis axisLine={true} tickLine={false} tickSize={16} stroke={"#9B9EAC"} dataKey='day'/>
-                <YAxis dataKey="kilogram" yAxisId="kilogram" axisLine={false} tickLine={false} orientation="right" tickSize={20} domain={['dataMin-7', 'dataMax+2']} stroke={"#9B9EAC"} tickCount={3}/>
-                <YAxis dataKey="calories" yAxisId="calories" orientation="left" domain={['dataMin-150', 'dataMax+150']} hide="true"/>
+                <XAxis axisLine={true} tickLine={false} tickSize={16} stroke={"#9B9EAC"} dataKey='day' />
+                <YAxis dataKey="kilogram" yAxisId="kilogram" axisLine={false} tickLine={false} orientation="right" tickSize={20} domain={['dataMin-7', 'dataMax+2']} stroke={"#9B9EAC"} tickCount={3} />
+                <YAxis dataKey="calories" yAxisId="calories" orientation="left" domain={['dataMin-150', 'dataMax+150']} hide="true" />
                 <Tooltip content={<TooltipCustom />} />
                 <CartesianGrid strokeDasharray="2 2" horizontal={true} vertical={false} />
                 <Bar dataKey="kilogram" yAxisId="kilogram" fill="#282D30" radius={[10, 10, 0, 0]} barSize={7} />

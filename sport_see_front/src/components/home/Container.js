@@ -23,8 +23,8 @@ function Container() {
     const [userPerformance, setUserPerformance] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() =>{
-       const fetchData = async() => {
+    useEffect(() => {
+        const fetchData = async () => {
             const infoUserResult = await getUserByIdApi(id)
             setInfoUser(infoUserResult.data.data)
 
@@ -39,8 +39,8 @@ function Container() {
             setUserPerformance(userPerformanceResult.data.data)
 
             setLoading(false)
-       }
-       fetchData()
+        }
+        fetchData()
     }, [id])
 
     /*
@@ -50,24 +50,24 @@ function Container() {
     const userAverageSessions = getUserAverageSessions(parseInt(id))
     const userPerformance = getUserPerformance(parseInt(id))
     */
-   
-    if(loading){
+
+    if (loading) {
         return (
             <div className="Container">
                 <p>Loading...</p>
             </div>
         )
-    } else{
+    } else {
         const sessionUser = userActivity.sessions
         const isNiceDay = sessionUser[sessionUser.length - 1].calories > sessionUser[sessionUser.length - 2].calories
         return (
             <div className="Container">
-                <Title name={infoUser.userInfos.firstName} isNiceDay={isNiceDay}/>
+                <Title name={infoUser.userInfos.firstName} isNiceDay={isNiceDay} />
                 <Graphiques infoUser={infoUser} sessionUser={sessionUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance} />
             </div>
-        );
+        )
     }
-       
+
 }
 
 export default Container

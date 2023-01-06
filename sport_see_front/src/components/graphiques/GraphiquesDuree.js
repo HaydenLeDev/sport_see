@@ -15,7 +15,7 @@ import PropTypes from 'prop-types'
  * @param {object} userAverageSessions 
  * @returns GraphiquesDuree
  */
-function GraphiquesDuree({userAverageSessions}) {
+function GraphiquesDuree({ userAverageSessions }) {
     let average = 0
     for (var i = 0; i < userAverageSessions.sessions.length; i++) {
         switch (userAverageSessions.sessions[i].day) {

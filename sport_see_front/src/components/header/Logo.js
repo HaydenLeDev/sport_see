@@ -1,4 +1,4 @@
-import logoLink from "../../assets/logo.png" 
+import logoLink from "../../assets/logo.png"
 
 /**
  * Contains the app logo.
@@ -9,7 +9,7 @@ function Logo() {
         <div className="Logo">
             <img src={logoLink} className="Logo-image" alt="Logo"></img>
         </div>
-    );
+    )
 }
 
-export default Logo;
+export default Logo

@@ -15,7 +15,7 @@ function ChoiceProfil() {
                 <Link to="/user/18" className="ChoiceProfil-Menu-Items">Cecilia</Link>
             </nav>
         </div>
-    );
+    )
 }
 
-export default ChoiceProfil;
+export default ChoiceProfil

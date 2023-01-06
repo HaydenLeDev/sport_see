@@ -1,4 +1,4 @@
-.Container{
+.Container {
     min-height: 780px;
     width: calc(100% - 267px);
     height: 100%;
@@ -8,4 +8,3 @@
     flex-direction: column;
     gap: 30px;
 }
-

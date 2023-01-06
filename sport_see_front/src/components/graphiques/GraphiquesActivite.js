@@ -1,14 +1,13 @@
-//import '../../style/components/graphiques/GraphiquesActivite.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
 
 /**
  * Graph to visualize user performance.
- * @param {object} props 
+ * @param {object} userPerformance 
  * @returns GraphiquesActivite
  */
-function GraphiquesActivite(props) {
+function GraphiquesActivite({ userPerformance }) {
 
-    const userPerformance = props.userPerformance
     for (var i = 0; i < userPerformance.data.length; i++) {
         switch (userPerformance.data[i].kind) {
             case 1:
@@ -34,17 +33,22 @@ function GraphiquesActivite(props) {
                 break
         }
     }
+
     return (
         <div className="GraphiquesActivite">
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={userPerformance.data} outerRadius={72} cx='50%' cy='50%'>
-                    <PolarGrid  radialLines={false} />
-                    <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" tickLine={false} tick={{ fontSize: 12 }}/>
-                    <Radar dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.7}  />
+                    <PolarGrid radialLines={false} />
+                    <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" tickLine={false} tick={{ fontSize: 12 }} />
+                    <Radar dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.7} />
                 </RadarChart>
             </ResponsiveContainer>
         </div>
-    );
+    )
 }
 
-export default GraphiquesActivite;
+GraphiquesActivite.propTypes = {
+    userPerformance: PropTypes.object.isRequired
+}
+
+export default GraphiquesActivite

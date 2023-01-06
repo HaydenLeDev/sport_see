@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  * @param {bool} isNiceDay 
  * @returns Title
  */
-function Title({name, isNiceDay}) {
+function Title({ name, isNiceDay }) {
     return isNiceDay ? (
         <div className="Title">
             <div className="Title-t">
@@ -33,4 +33,4 @@ Title.propTypes = {
     isNiceDay: PropTypes.bool.isRequired
 }
 
-export default Title;
+export default Title

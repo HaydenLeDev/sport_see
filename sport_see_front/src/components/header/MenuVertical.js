@@ -19,7 +19,7 @@ function MenuVertical() {
             </div>
             <p>Copiryght, SportSee 2020</p>
         </div>
-    );
+    )
 }
 
-export default MenuVertical;
+export default MenuVertical

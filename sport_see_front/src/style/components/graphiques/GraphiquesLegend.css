@@ -1,4 +1,4 @@
-.GraphUserActivity_Informations{
+.GraphUserActivity_Informations {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,32 +6,29 @@
     margin-top: 24px;
 }
 
-
-
-.GraphUserActivity_Informations_legend{
+.GraphUserActivity_Informations_legend {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-
-.GraphUserActivity_Informations_legend_info{
+.GraphUserActivity_Informations_legend_info {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.GraphUserActivity_Informations_legend_couleur{
+.GraphUserActivity_Informations_legend_couleur {
     width: 8px;
     height: 8px;
     border-radius: 10px;
 }
 
-.noir{
+.noir {
     background-color: black;
 }
 
-.rouge{
+.rouge {
     background-color: red;
 }
 
@@ -39,22 +36,22 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: #74798C;
+    color: #74798c;
 }
 
-.GraphUserActivity_Informations_titre h2{
+.GraphUserActivity_Informations_titre h2 {
     font-weight: 500;
     font-size: 15px;
     line-height: 24px;
-    color: #20253A;
+    color: #20253a;
 }
 
-.custom-tooltip{
+.custom-tooltip {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    color: #FFFFFF;
-    background-color: #E60000;
+    color: #ffffff;
+    background-color: #e60000;
     padding: 7px;
     border-radius: 0px;
     font-weight: 500;

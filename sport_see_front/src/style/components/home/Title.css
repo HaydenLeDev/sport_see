@@ -1,4 +1,4 @@
-.Title{
+.Title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -7,18 +7,18 @@
     margin-top: 68px;
 }
 
-.Title-t{
+.Title-t {
     display: flex;
     gap: 20px;
     font-weight: 500;
     font-size: 48px;
 }
 
-.Title-name{
-    color: #FF0101;
+.Title-name {
+    color: #ff0101;
 }
 
-.Title-p{
+.Title-p {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;

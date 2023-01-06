@@ -12,13 +12,13 @@ import PropTypes from 'prop-types'
  * @param {object} userPerformance 
  * @returns Graphics and the power supply part
  */
-function Graphiques({infoUser, sessionUser, userAverageSessions, userPerformance}) {
-    
+function Graphiques({ infoUser, sessionUser, userAverageSessions, userPerformance }) {
+
     return (
-        <div className="Graphiques">   
+        <div className="Graphiques">
             <div className="Graphiques-graph">
-                <GraphUserActivity sessionUser={sessionUser}/>
-                <GraphiquesInformation infoUser={infoUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance}/>
+                <GraphUserActivity sessionUser={sessionUser} />
+                <GraphiquesInformation infoUser={infoUser} userAverageSessions={userAverageSessions} userPerformance={userPerformance} />
             </div>
             <Alimentation infoUser={infoUser} />
         </div>

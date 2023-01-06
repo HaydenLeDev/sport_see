@@ -6,17 +6,17 @@ import PropTypes from 'prop-types'
  * @returns TooltipCustomDuree
  */
 
-function TooltipCustomDuree({active, payload}) {
-  
-    if (active && payload && payload.length) {
-        return (
-          <div className="custom-tooltip-duree">
-            <p className="custom-tooltip-duree-min">{`${payload[0].value} min`}</p>
-          </div>
-        )
-      }
+function TooltipCustomDuree({ active, payload }) {
 
-    return null
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip-duree">
+        <p className="custom-tooltip-duree-min">{`${payload[0].value} min`}</p>
+      </div>
+    )
+  }
+
+  return null
 }
 
 TooltipCustomDuree.propTypes = {
@@ -24,4 +24,4 @@ TooltipCustomDuree.propTypes = {
   payload: PropTypes.array
 }
 
-export default TooltipCustomDuree;
+export default TooltipCustomDuree

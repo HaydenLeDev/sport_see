@@ -16,7 +16,7 @@ function MenuHorizontal() {
                 <Link to="/" className="MenuHorizontal-Items">Communauté</Link>
             </div>
         </div>
-    );
+    )
 }
 
-export default MenuHorizontal;
+export default MenuHorizontal

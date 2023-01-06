@@ -80,7 +80,7 @@ export function getUserAverageSessions(id) {
  * @param {string} id 
  * @returns data 
  */
-export function getUserPerformance(id){
+export function getUserPerformance(id) {
     var userPerformance
     for (var i = 0; i < USER_PERFORMANCE.length; i++) {
         if (USER_PERFORMANCE[i].userId === id) {

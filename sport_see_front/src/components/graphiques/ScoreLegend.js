@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
  * @returns ScoreLegend
  */
 
-function ScoreLegend({score}) {
-    
+function ScoreLegend({ score }) {
+
     return (
         <div className="Score-legend">
             <p className="Score-legend-pourcentage">{score}%</p>

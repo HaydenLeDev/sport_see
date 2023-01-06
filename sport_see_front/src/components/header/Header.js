@@ -11,7 +11,7 @@ function Header() {
             <MenuHorizontal />
             <MenuVertical />
         </div>
-    );
+    )
 }
 
 export default Header;
