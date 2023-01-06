@@ -1,14 +1,15 @@
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import ScoreLegend from "./ScoreLegend";
 import "../../style/components/graphiques/Score.css"
+import PropTypes from 'prop-types'
 
 /**
  * Round graph depending on user score.
- * @param {object} props 
+ * @param {object} infoUser 
  * @returns Score
  */
-function Score(props) {
-    const infoUser = props.infoUser
+function Score({infoUser}) {
+
     var score = infoUser.score * 100 
     if (isNaN(score)){
         score = infoUser.todayScore * 100
@@ -40,6 +41,10 @@ function Score(props) {
             <ScoreLegend score={score}/>
         </div>
     );
+}
+
+Score.propTypes = {
+    infoUser: PropTypes.object.isRequired
 }
 
 export default Score;

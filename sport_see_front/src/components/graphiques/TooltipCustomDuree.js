@@ -1,14 +1,13 @@
+import PropTypes from 'prop-types'
+
 /**
  * Custom tooltip for average duration chart.
  * @param {object} props 
  * @returns TooltipCustomDuree
  */
 
-function TooltipCustomDuree(props) {
-
-    const active = props.active
-    const payload = props.payload
-
+function TooltipCustomDuree({active, payload}) {
+  
     if (active && payload && payload.length) {
         return (
           <div className="custom-tooltip-duree">
@@ -18,6 +17,11 @@ function TooltipCustomDuree(props) {
       }
 
     return null
+}
+
+TooltipCustomDuree.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array
 }
 
 export default TooltipCustomDuree;

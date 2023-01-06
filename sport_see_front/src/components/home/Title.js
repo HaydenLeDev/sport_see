@@ -1,14 +1,13 @@
 import '../../style/components/home/Title.css';
+import PropTypes from 'prop-types'
 
 /**
  * Returns the title or the title plus a sentence depending on the performance of the user.
- * @param {object} propos 
+ * @param {string} name 
+ * @param {bool} isNiceDay 
  * @returns Title
  */
-function Title(propos) {
-    const name = propos.name
-    const isNiceDay = propos.isNiceDay
-
+function Title({name, isNiceDay}) {
     return isNiceDay ? (
         <div className="Title">
             <div className="Title-t">
@@ -27,6 +26,11 @@ function Title(propos) {
         </div>
 
     )
+}
+
+Title.propTypes = {
+    name: PropTypes.string.isRequired,
+    isNiceDay: PropTypes.bool.isRequired
 }
 
 export default Title;

@@ -9,16 +9,14 @@ import {
 } from 'recharts';
 import GraphUserLegende from "./GraphUserLegende"
 import TooltipCustom from './TooltipCustom';
+import PropTypes from 'prop-types'
 
 /**
  * Contains the BarChart allowing to visualize the kilo and kcal data.
- * @param {object} props 
+ * @param {array} sessionUser 
  * @returns GraphUserActivity
  */
-function GraphUserActivity(props) {
-
-    const sessionUser = props.sessionUser
-
+function GraphUserActivity({sessionUser}) {
     //Mise les index des jours
     for(let i = 0; i < sessionUser.length; i++){
         sessionUser[i].day = i + 1
@@ -44,4 +42,7 @@ function GraphUserActivity(props) {
     );
 }
 
-export default GraphUserActivity;
+GraphUserActivity.propTypes = {
+    sessionUser: PropTypes.array.isRequired,
+}
+export default GraphUserActivity

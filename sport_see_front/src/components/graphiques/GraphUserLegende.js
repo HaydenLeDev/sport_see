@@ -5,7 +5,6 @@ import '../../style/components/graphiques/GraphiquesLegend.css';
  * @returns GraphUserLegende
  */
 function GraphUserLegende() {
-
     return (
         <div className="GraphUserActivity_Informations">
             <div className="GraphUserActivity_Informations_titre">

@@ -1,15 +1,14 @@
 import '../../style/components/graphiques/Graphiques.css';
+import PropTypes from 'prop-types'
 
 
 /**
  * Custom tooltip for the bar chart.
- * @param {object} props 
+ * @param {bool} payload 
+ * @param {array} active 
  * @returns TooltipCustom
  */
-function TooltipCustom(props) {
-
-    const active = props.active
-    const payload = props.payload
+function TooltipCustom({active, payload}) {
 
     if (active && payload && payload.length) {
         return (
@@ -21,6 +20,11 @@ function TooltipCustom(props) {
       }
 
     return null
+}
+
+TooltipCustom.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array
 }
 
 export default TooltipCustom;

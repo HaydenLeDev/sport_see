@@ -43,11 +43,14 @@ function Container() {
        fetchData()
     }, [id])
 
-    //const infoUser = getUserById(parseInt(id))
-    //const userActivity = getUserActivityById(parseInt(id))
-    //const userAverageSessions = getUserAverageSessions(parseInt(id))
-    //const userPerformance = getUserPerformance(parseInt(id))
-    
+    /*
+    Pour moke l'api
+    const infoUser = getUserById(parseInt(id))
+    const userActivity = getUserActivityById(parseInt(id))
+    const userAverageSessions = getUserAverageSessions(parseInt(id))
+    const userPerformance = getUserPerformance(parseInt(id))
+    */
+   
     if(loading){
         return (
             <div className="Container">

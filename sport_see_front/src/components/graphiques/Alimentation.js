@@ -4,17 +4,15 @@ import iconeCal from "../../assets/icones_Alimentation/calories-icon.png"
 import iconeProt from "../../assets/icones_Alimentation/protein-icon.png"
 import iconeGlucide from "../../assets/icones_Alimentation/carbs-icon.png"
 import iconeLipides from "../../assets/icones_Alimentation/fat-icon.png"
+import PropTypes from 'prop-types'
+
 
 /**
  * Contains the list of food information.
- * @param {object} props 
+ * @param {object} infoUser 
  * @returns Alimentation
  */
-
-function Alimentation(props) {
-    
-    const infoUser = props.infoUser
-
+function Alimentation({infoUser}) {
     return (
         <div className="Alimentation">   
             <DataItem scrImage={iconeCal} number={infoUser.keyData.calorieCount} unite="kCal" text="Calories"/>
@@ -23,6 +21,10 @@ function Alimentation(props) {
             <DataItem scrImage={iconeLipides} number={infoUser.keyData.lipidCount} unite="g" text="Lipides"/>
         </div>
     );
+}
+
+Alimentation.propTypes = {
+    infoUser: PropTypes.object.isRequired,
 }
 
 export default Alimentation;

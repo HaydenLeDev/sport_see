@@ -1,5 +1,4 @@
 import '../../style/components/graphiques/GraphiquesDuree.css';
-
 import {
     LineChart,
     Line,
@@ -9,14 +8,14 @@ import {
     YAxis,
 } from 'recharts';
 import TooltipCustomDuree from './TooltipCustomDuree';
+import PropTypes from 'prop-types'
 
 /**
  * Line chart of average session times.
- * @param {object} props 
+ * @param {object} userAverageSessions 
  * @returns GraphiquesDuree
  */
-function GraphiquesDuree(props) {
-    const userAverageSessions = props.userAverageSessions
+function GraphiquesDuree({userAverageSessions}) {
     let average = 0
     for (var i = 0; i < userAverageSessions.sessions.length; i++) {
         switch (userAverageSessions.sessions[i].day) {
@@ -132,6 +131,10 @@ function GraphiquesDuree(props) {
             </div>
         </div>
     );
+}
+
+GraphiquesDuree.propTypes = {
+    userAverageSessions: PropTypes.object.isRequired,
 }
 
 export default GraphiquesDuree;

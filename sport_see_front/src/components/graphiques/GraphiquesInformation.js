@@ -1,18 +1,16 @@
 import GraphiquesActivite from "./GraphiquesActivite";
 import GraphiquesDuree from "./GraphiquesDuree";
 import Score from "./Score";
+import PropTypes from 'prop-types'
 
 /**
  * Contains the 3 secondary graphics.
- * @param {object} props 
+ * @param {object} userAverageSessions 
+ * @param {object} infoUser 
+ * @param {object} userPerformance 
  * @returns GraphiquesInformation
  */
-function GraphiquesInformation(props) {
-    const userAverageSessions = props.userAverageSessions
-    const infoUser = props.infoUser
-    const userPerformance = props.userPerformance
-
-
+function GraphiquesInformation({userAverageSessions, infoUser, userPerformance}) {
     return (
         <div className="GraphiquesInformation">   
             <GraphiquesDuree userAverageSessions={userAverageSessions}/>
@@ -22,4 +20,10 @@ function GraphiquesInformation(props) {
     );
 }
 
-export default GraphiquesInformation;
+GraphiquesInformation.propTypes = {
+    userAverageSessions: PropTypes.object.isRequired,
+    infoUser: PropTypes.object.isRequired,
+    userPerformance: PropTypes.object.isRequired
+}
+
+export default GraphiquesInformation

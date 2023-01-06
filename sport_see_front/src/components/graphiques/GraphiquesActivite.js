@@ -29,6 +29,9 @@ function GraphiquesActivite(props) {
             case 6:
                 userPerformance.data[i].kind = "Intensity"
                 break
+            default:
+                userPerformance.data[i].kind = "Intensity"
+                break
         }
     }
     return (

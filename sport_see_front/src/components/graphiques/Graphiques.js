@@ -2,18 +2,17 @@ import '../../style/components/graphiques/Graphiques.css';
 import Alimentation from './Alimentation';
 import GraphUserActivity from './GraphUserActivity';
 import GraphiquesInformation from './GraphiquesInformation';
+import PropTypes from 'prop-types'
 
 /**
  * Contains all charts and feed information.
- * @param {object} props 
+ * @param {object} infoUser 
+ * @param {array} sessionUser 
+ * @param {object} userAverageSessions 
+ * @param {object} userPerformance 
  * @returns Graphics and the power supply part
  */
-function Graphiques(props) {
-    
-    const infoUser = props.infoUser
-    const sessionUser = props.sessionUser
-    const userAverageSessions = props.userAverageSessions
-    const userPerformance = props.userPerformance
+function Graphiques({infoUser, sessionUser, userAverageSessions, userPerformance}) {
     
     return (
         <div className="Graphiques">   
@@ -24,6 +23,13 @@ function Graphiques(props) {
             <Alimentation infoUser={infoUser} />
         </div>
     );
+}
+
+Graphiques.propTypes = {
+    infoUser: PropTypes.object.isRequired,
+    sessionUser: PropTypes.array.isRequired,
+    userAverageSessions: PropTypes.object.isRequired,
+    userPerformance: PropTypes.object.isRequired,
 }
 
 export default Graphiques;
