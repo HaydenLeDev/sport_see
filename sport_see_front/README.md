@@ -16,19 +16,19 @@ Project is created with:
 
 
 ## Prérequis
-* Installation de NodeJS
+* Installing NodeJS
 
 ## Installation 
-1. Lancer le back-end
-2. Cloner le repository 
+1. Launch the backend
+2. Clone repository 
 ```
 git clone https://github.com/HaydenLeDev/sport_see.git
 ```
-3. Installer les packages npm 
+3. Install npm packages
 ```
 npm i
 ```
-4. npm start
+4. Start the project
 ```
 npm start
 ```
