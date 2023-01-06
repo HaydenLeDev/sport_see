@@ -17,6 +17,10 @@ Project is created with:
 
 ## Prérequis
 * Installation de NodeJS
-* Lancer le projet Back-End
 
 ## Installation 
+1. Installation de NodeJS
+2. Cloner le repository 
+3. Installer les packages npm 
+4. npm start
+ 
