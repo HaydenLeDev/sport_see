@@ -5,6 +5,7 @@ Partie front-end du projet 12 : Développez un tableau de bord d'analytics avec 
 ## Table of content
 * [Technologies](#technologies)
 * [Prérequis](#Prérequis)
+* [Installation](#Installation)
 
 ## Technologies
 
