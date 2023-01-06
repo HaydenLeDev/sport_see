@@ -4,6 +4,13 @@ import iconeCal from "../../assets/icones_Alimentation/calories-icon.png"
 import iconeProt from "../../assets/icones_Alimentation/protein-icon.png"
 import iconeGlucide from "../../assets/icones_Alimentation/carbs-icon.png"
 import iconeLipides from "../../assets/icones_Alimentation/fat-icon.png"
+
+/**
+ * Contains the list of food information.
+ * @param {object} props 
+ * @returns Alimentation
+ */
+
 function Alimentation(props) {
     
     const infoUser = props.infoUser

@@ -1,3 +1,9 @@
+/**
+ * Legend for the score graph.
+ * @param {object} props 
+ * @returns ScoreLegend
+ */
+
 function ScoreLegend(props) {
     const score = props.score
     

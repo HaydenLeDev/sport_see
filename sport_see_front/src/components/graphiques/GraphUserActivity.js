@@ -10,7 +10,11 @@ import {
 import GraphUserLegende from "./GraphUserLegende"
 import TooltipCustom from './TooltipCustom';
 
-
+/**
+ * Contains the BarChart allowing to visualize the kilo and kcal data.
+ * @param {object} props 
+ * @returns GraphUserActivity
+ */
 function GraphUserActivity(props) {
 
     const sessionUser = props.sessionUser

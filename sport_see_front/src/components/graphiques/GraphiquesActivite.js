@@ -1,7 +1,11 @@
 //import '../../style/components/graphiques/GraphiquesActivite.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
-
+/**
+ * Graph to visualize user performance.
+ * @param {object} props 
+ * @returns GraphiquesActivite
+ */
 function GraphiquesActivite(props) {
 
     const userPerformance = props.userPerformance

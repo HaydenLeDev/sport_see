@@ -1,7 +1,11 @@
 import '../../style/components/home/Title.css';
 
+/**
+ * Returns the title or the title plus a sentence depending on the performance of the user.
+ * @param {object} propos 
+ * @returns Title
+ */
 function Title(propos) {
-
     const name = propos.name
     const isNiceDay = propos.isNiceDay
 

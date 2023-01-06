@@ -11,8 +11,8 @@ import { useEffect, useState } from 'react';
 
 
 /**
- * 
- * @returns 
+ * Contains all charts and initialize all data.
+ * @returns Container
  */
 function Container() {
     const { id } = useParams()

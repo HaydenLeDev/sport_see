@@ -2,6 +2,10 @@ import '../../style/components/header/Header.css';
 import { Link } from "react-router-dom";
 
 
+/**
+ * Small navigation menu for the different users (only used for development)
+ * @returns ChoiceProfil
+ */
 function ChoiceProfil() {
 
     return (

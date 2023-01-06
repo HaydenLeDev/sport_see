@@ -1,5 +1,10 @@
 import '../../style/components/graphiques/DataItem.css';
 
+/**
+ * A dataItem has a unit a text a number and an image.
+ * @param {object} props 
+ * @returns DataItem
+ */
 function DataItem(props) {
 
     const number = new Intl.NumberFormat("en-IN").format(props.number)

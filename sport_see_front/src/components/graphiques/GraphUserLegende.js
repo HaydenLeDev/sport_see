@@ -1,5 +1,9 @@
 import '../../style/components/graphiques/GraphiquesLegend.css';
 
+/**
+ * Contains the legends for the bar chart.
+ * @returns GraphUserLegende
+ */
 function GraphUserLegende() {
 
     return (

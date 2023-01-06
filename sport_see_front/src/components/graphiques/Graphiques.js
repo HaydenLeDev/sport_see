@@ -3,6 +3,11 @@ import Alimentation from './Alimentation';
 import GraphUserActivity from './GraphUserActivity';
 import GraphiquesInformation from './GraphiquesInformation';
 
+/**
+ * Contains all charts and feed information.
+ * @param {object} props 
+ * @returns Graphics and the power supply part
+ */
 function Graphiques(props) {
     
     const infoUser = props.infoUser

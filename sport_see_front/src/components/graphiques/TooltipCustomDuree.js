@@ -1,3 +1,9 @@
+/**
+ * Custom tooltip for average duration chart.
+ * @param {object} props 
+ * @returns TooltipCustomDuree
+ */
+
 function TooltipCustomDuree(props) {
 
     const active = props.active

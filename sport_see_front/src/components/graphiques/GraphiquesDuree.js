@@ -10,6 +10,11 @@ import {
 } from 'recharts';
 import TooltipCustomDuree from './TooltipCustomDuree';
 
+/**
+ * Line chart of average session times.
+ * @param {object} props 
+ * @returns GraphiquesDuree
+ */
 function GraphiquesDuree(props) {
     const userAverageSessions = props.userAverageSessions
     let average = 0
@@ -41,9 +46,13 @@ function GraphiquesDuree(props) {
                 break
         }
     }
+
+    /**
+     * Listen to the graph and change the position of the background depending on where the activeDot is.
+     * @param {object} event 
+     */
     const handleMouseMove = (event) => {
         //console.log(event)
-
         if (event.isTooltipActive) {
             //const { chartX, chartY } = event;
             var position = document.getElementById("dotActive").cx.animVal.value

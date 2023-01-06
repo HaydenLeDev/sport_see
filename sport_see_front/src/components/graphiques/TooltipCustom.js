@@ -1,7 +1,11 @@
 import '../../style/components/graphiques/Graphiques.css';
 
 
-
+/**
+ * Custom tooltip for the bar chart.
+ * @param {object} props 
+ * @returns TooltipCustom
+ */
 function TooltipCustom(props) {
 
     const active = props.active
